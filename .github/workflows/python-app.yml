@@ -32,4 +32,20 @@ jobs:
           poetry install
           poetry run playwright install
       - name: Run tests
-        run: poetry run pytest tests/
+        run: |
+          poetry run pytest tests/ --junit-xml results/pytest.xml
+      - name: Upload Unit Test Results
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v2
+        with:
+          name: Unit Test Results (Python 3.7)
+          path: results/*.xml
+      - name: Download Artifacts
+        if: success() || failure()
+        uses: actions/download-artifact@v2
+        with:
+          path: artifacts
+      - name: Publish Unit Test Results
+        uses: EnricoMi/publish-unit-test-result-action@v1
+        with:
+          files: artifacts/**/*.xml
