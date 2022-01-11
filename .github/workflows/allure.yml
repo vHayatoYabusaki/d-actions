@@ -33,12 +33,12 @@ jobs:
           poetry run playwright install
       - name: Run tests
         run: |
-          poetry run pytest tests/ --alluredir=/results/allure-results
+          poetry run pytest tests/ --alluredir=/github/workspace/allure-results
       - name: Upload Unit Test Results
         uses: actions/upload-artifact@master
         with:
           name: allure-results
-          path: /results/allure-results
+          path: /github/workspace/allure-results
           retention-days: 20
       - name: Get Allure history
         uses: actions/checkout@v2
