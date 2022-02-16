@@ -29,14 +29,6 @@ jobs:
         run: |
           poetry install
           poetry run playwright install
-      - name: formatting with black
-        run: poetry run black .
-      - name: autoflake
-        run: poetry run autoflake -r .
-        - uses: stefanzweifel/git-auto-commit-action@v3.0.0
-          with:
-            commit_message: Apply Code Formatter Change
-            ref: ${{ github.head_ref }}
       - name: Run tests
         run: |
           poetry run pytest tests/ --junit-xml results/pytest.xml
