@@ -5,7 +5,7 @@ name: Testing with normal report
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [ develop ]
 
 jobs:
   ci:
