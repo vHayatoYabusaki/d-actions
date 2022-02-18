@@ -33,10 +33,8 @@ jobs:
           cd tests
           chmod u+x ./test_runner.command
           poetry run sh ./test_runner.command
-      - name: Test Report
-        uses: dorny/test-reporter@v1
-        if: success() || failure()    # run this step even if previous step failed
+      - name: Publish Unit Test Results
+        uses: EnricoMi/publish-unit-test-result-action/composite@v1
+        if: always()
         with:
-          name: Test Report            # Name of the check run which will be created
-          path: results/*.xml    # Path to test results
-          reporter: java-junit        # Format of test results
+          files: results/**/*.xml
