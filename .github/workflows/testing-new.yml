@@ -11,11 +11,9 @@ jobs:
   ci:
     strategy:
       fail-fast: false
-      matrix:
-        python-version: [ 3.7 ]
-        poetry-version: [ 1.1.12 ]
-        os: [ macos-latest ]
-    runs-on: ${{ matrix.os }}
+      python-version: [ 3.7 ]
+      poetry-version: [ 1.1.12 ]
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
@@ -39,5 +37,5 @@ jobs:
         if: success() || failure()    # run this step even if previous step failed
         with:
           name: Test Report            # Name of the check run which will be created
-          path: results/pytest.xml    # Path to test results
+          path: results/*.xml    # Path to test results
           reporter: java-junit        # Format of test results
