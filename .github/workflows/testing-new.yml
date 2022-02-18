@@ -35,8 +35,10 @@ jobs:
           poetry run pytest test_google.py --junitxml=../results/result_google.xml
           poetry run pytest test_yahoo.py --junitxml=../results/result_yahoo.xml
         continue-on-error: true
-      - name: Publish Unit Test Results
-        uses: EnricoMi/publish-unit-test-result-action/composite@v1
-        if: always()
+      - name: Test Report
+        uses: dorny/test-reporter@v1
+        if: success() || failure()    # run this step even if previous step failed
         with:
-          files: results/*.xml
+          name: Test Report           # Name of the check run which will be created
+          path: results/*.xml    # Path to test results
+          reporter: java-junit        # Format of test results
