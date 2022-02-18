@@ -32,9 +32,8 @@ jobs:
       - name: Run tests
         run: |
           cd tests
-          chmod u+x test_runner.command
-          poetry shell
-          ./test_runner.command
+          chmod u+x ./test_runner.command
+          poetry run sh ./test_runner.command
       - name: Test Report
         uses: dorny/test-reporter@v1
         if: success() || failure()    # run this step even if previous step failed
