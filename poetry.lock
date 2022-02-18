@@ -56,7 +56,7 @@ python-versions = "*"
 
 [[package]]
 name = "charset-normalizer"
-version = "2.0.10"
+version = "2.0.12"
 description = "The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet."
 category = "dev"
 optional = false
@@ -151,17 +151,17 @@ pyparsing = ">=2.0.2,<3.0.5 || >3.0.5"
 
 [[package]]
 name = "playwright"
-version = "1.17.2"
+version = "1.19.0"
 description = "A high-level API to automate web browsers"
 category = "dev"
 optional = false
 python-versions = ">=3.7"
 
 [package.dependencies]
-greenlet = ">=1.0.0"
-pyee = ">=8.0.1"
+greenlet = "1.1.2"
+pyee = "8.1.0"
 typing-extensions = {version = "*", markers = "python_version <= \"3.8\""}
-websockets = ">=8.1"
+websockets = "10.1"
 
 [[package]]
 name = "pluggy"
@@ -196,7 +196,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
 [[package]]
 name = "pyee"
-version = "8.2.2"
+version = "8.1.0"
 description = "A port of node.js's EventEmitter to python."
 category = "dev"
 optional = false
@@ -212,7 +212,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 
 [[package]]
 name = "pyparsing"
-version = "3.0.6"
+version = "3.0.7"
 description = "Python parsing module"
 category = "dev"
 optional = false
@@ -257,7 +257,7 @@ requests = ">=2.9"
 
 [[package]]
 name = "pytest-playwright"
-version = "0.2.2"
+version = "0.2.3"
 description = "A pytest wrapper with fixtures for Playwright to automate web browsers"
 category = "dev"
 optional = false
@@ -271,11 +271,11 @@ python-slugify = "*"
 
 [[package]]
 name = "python-slugify"
-version = "5.0.2"
-description = "A Python Slugify application that handles Unicode"
+version = "6.0.1"
+description = "A Python slugify application that also handles Unicode"
 category = "dev"
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, !=3.5.*"
 
 [package.dependencies]
 text-unidecode = ">=1.3"
@@ -327,7 +327,7 @@ python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
 
 [[package]]
 name = "typing-extensions"
-version = "4.0.1"
+version = "4.1.1"
 description = "Backported and Experimental Type Hints for Python 3.6+"
 category = "dev"
 optional = false
@@ -393,8 +393,8 @@ certifi = [
     {file = "certifi-2021.10.8.tar.gz", hash = "sha256:78884e7c1d4b00ce3cea67b44566851c4343c120abd683433ce934a68ea58872"},
 ]
 charset-normalizer = [
-    {file = "charset-normalizer-2.0.10.tar.gz", hash = "sha256:876d180e9d7432c5d1dfd4c5d26b72f099d503e8fcc0feb7532c9289be60fcbd"},
-    {file = "charset_normalizer-2.0.10-py3-none-any.whl", hash = "sha256:cb957888737fc0bbcd78e3df769addb41fd1ff8cf950dc9e7ad7793f1bf44455"},
+    {file = "charset-normalizer-2.0.12.tar.gz", hash = "sha256:2857e29ff0d34db842cd7ca3230549d1a697f96ee6d3fb071cfa6c7393832597"},
+    {file = "charset_normalizer-2.0.12-py3-none-any.whl", hash = "sha256:6881edbebdb17b39b4eaaa821b438bf6eddffb4468cf344f09f89def34a8b1df"},
 ]
 colorama = [
     {file = "colorama-0.4.4-py2.py3-none-any.whl", hash = "sha256:9f47eda37229f68eee03b24b9748937c7dc3868f906e8ba69fbcbdd3bc5dc3e2"},
@@ -477,13 +477,13 @@ packaging = [
     {file = "packaging-21.3.tar.gz", hash = "sha256:dd47c42927d89ab911e606518907cc2d3a1f38bbd026385970643f9c5b8ecfeb"},
 ]
 playwright = [
-    {file = "playwright-1.17.2-py3-none-macosx_10_13_x86_64.whl", hash = "sha256:9dcdb31f73fccbf8f23f90ac0c18cefaabe05ef78fe9861771b460aa312f4bc9"},
-    {file = "playwright-1.17.2-py3-none-macosx_11_0_arm64.whl", hash = "sha256:c78cc49ad970ddcec442aef70517aedc2196c5ef416c67f3e8fbbd1bd0ddfb64"},
-    {file = "playwright-1.17.2-py3-none-macosx_11_0_universal2.whl", hash = "sha256:404135562a8f49f29174073a4d6af6dc12021db256c01b4a983cce9438c203c6"},
-    {file = "playwright-1.17.2-py3-none-manylinux1_x86_64.whl", hash = "sha256:0164ba36a0eab00217ae548961bba92e2c67186f6b6ac43c2240c86663de6fa1"},
-    {file = "playwright-1.17.2-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:b2ad61a2ba78149a2f32d18926c045e68782d5dc0e7250e7ce43643da142cc64"},
-    {file = "playwright-1.17.2-py3-none-win32.whl", hash = "sha256:8fefe383ba1baf474534c6fc2338113318725c420639bdbe1a57a371c20245b3"},
-    {file = "playwright-1.17.2-py3-none-win_amd64.whl", hash = "sha256:f64403941e0d6bfcc92d451150bbdb4d8eefdaa0c26866c27304106f86923d60"},
+    {file = "playwright-1.19.0-py3-none-macosx_10_13_x86_64.whl", hash = "sha256:2a5b38514339f0e7456598ae7713c095d6acafa05fc2396b93cf8428e87373d5"},
+    {file = "playwright-1.19.0-py3-none-macosx_11_0_arm64.whl", hash = "sha256:5253b1235e4498fb61765223cf81e92600e00d3ad436a4dc028666c218438cfa"},
+    {file = "playwright-1.19.0-py3-none-macosx_11_0_universal2.whl", hash = "sha256:0c7b29bef3722b3b118178082820a230ed0817ab88061c32867dcfb582a00ac3"},
+    {file = "playwright-1.19.0-py3-none-manylinux1_x86_64.whl", hash = "sha256:2373ddc133dea6889686562b2489de90a50b7ed0194f948aa06a3704e60a0c4b"},
+    {file = "playwright-1.19.0-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:99b074c91869dbe303fca8b122913d747c0b2a8c744ead60d7991cee3ce98c20"},
+    {file = "playwright-1.19.0-py3-none-win32.whl", hash = "sha256:7a8cd4ad53d70fcc46fc8947d243bfc1c7356256a1b3303cbd209a35736d2f9b"},
+    {file = "playwright-1.19.0-py3-none-win_amd64.whl", hash = "sha256:5febf7069572f34271f2d594a67fd2cdcffa7b83e4295db97c4b3825b3796536"},
 ]
 pluggy = [
     {file = "pluggy-1.0.0-py2.py3-none-any.whl", hash = "sha256:74134bbf457f031a36d68416e1509f34bd5ccc019f0bcc952c7b909d06b37bd3"},
@@ -498,16 +498,16 @@ pycodestyle = [
     {file = "pycodestyle-2.8.0.tar.gz", hash = "sha256:eddd5847ef438ea1c7870ca7eb78a9d47ce0cdb4851a5523949f2601d0cbbe7f"},
 ]
 pyee = [
-    {file = "pyee-8.2.2-py2.py3-none-any.whl", hash = "sha256:c09f56e36eb10bf23aa2aacf145f690ded75b990a3d9523fd478b005940303d2"},
-    {file = "pyee-8.2.2.tar.gz", hash = "sha256:5c7e60f8df95710dbe17550e16ce0153f83990c00ef744841b43f371ed53ebea"},
+    {file = "pyee-8.1.0-py2.py3-none-any.whl", hash = "sha256:383973b63ad7ed5e3c0311f8b179c52981f9e7b3eaea0e9a830d13ec34dde65f"},
+    {file = "pyee-8.1.0.tar.gz", hash = "sha256:92dacc5bd2bdb8f95aa8dd2585d47ca1c4840e2adb95ccf90034d64f725bfd31"},
 ]
 pyflakes = [
     {file = "pyflakes-2.4.0-py2.py3-none-any.whl", hash = "sha256:3bb3a3f256f4b7968c9c788781e4ff07dce46bdf12339dcda61053375426ee2e"},
     {file = "pyflakes-2.4.0.tar.gz", hash = "sha256:05a85c2872edf37a4ed30b0cce2f6093e1d0581f8c19d7393122da7e25b2b24c"},
 ]
 pyparsing = [
-    {file = "pyparsing-3.0.6-py3-none-any.whl", hash = "sha256:04ff808a5b90911829c55c4e26f75fa5ca8a2f5f36aa3a51f68e27033341d3e4"},
-    {file = "pyparsing-3.0.6.tar.gz", hash = "sha256:d9bdec0013ef1eb5a84ab39a3b3868911598afa494f5faa038647101504e2b81"},
+    {file = "pyparsing-3.0.7-py3-none-any.whl", hash = "sha256:a6c06a88f252e6c322f65faf8f418b16213b51bdfaece0524c1c1bc30c63c484"},
+    {file = "pyparsing-3.0.7.tar.gz", hash = "sha256:18ee9022775d270c55187733956460083db60b37d0d0fb357445f3094eed3eea"},
 ]
 pytest = [
     {file = "pytest-6.2.5-py3-none-any.whl", hash = "sha256:7310f8d27bc79ced999e760ca304d69f6ba6c6649c0b60fb0e04a4a77cacc134"},
@@ -518,12 +518,12 @@ pytest-base-url = [
     {file = "pytest_base_url-1.4.2-py2.py3-none-any.whl", hash = "sha256:8b6523a1a3af73c317bdae97b722dfb55a7336733d1ad411eb4a4931347ba77a"},
 ]
 pytest-playwright = [
-    {file = "pytest-playwright-0.2.2.tar.gz", hash = "sha256:d28ff7f58f557e982b0474148e778aa77b37f7176c000c79f5c6e8728bc89e04"},
-    {file = "pytest_playwright-0.2.2-py3-none-any.whl", hash = "sha256:e06d4cf2b40f58290e7d829b7adc090de9fe02bc088b9356e8c0df86acc6dae6"},
+    {file = "pytest-playwright-0.2.3.tar.gz", hash = "sha256:438315f3c45457d66ac4dfba8baaf02ce1e4cf29487f34bfded5e1a2319208fc"},
+    {file = "pytest_playwright-0.2.3-py3-none-any.whl", hash = "sha256:1b3d62bce59c9634a5b0fd4f98ff6608630c5d3be14a31497e0508132a01c7b5"},
 ]
 python-slugify = [
-    {file = "python-slugify-5.0.2.tar.gz", hash = "sha256:f13383a0b9fcbe649a1892b9c8eb4f8eab1d6d84b84bb7a624317afa98159cab"},
-    {file = "python_slugify-5.0.2-py2.py3-none-any.whl", hash = "sha256:6d8c5df75cd4a7c3a2d21e257633de53f52ab0265cd2d1dc62a730e8194a7380"},
+    {file = "python-slugify-6.0.1.tar.gz", hash = "sha256:ba72aa9d9f0514c0c3dd4430442f698ccc27a24d19630473663a71e3ec606bc1"},
+    {file = "python_slugify-6.0.1-py2.py3-none-any.whl", hash = "sha256:89eec682c5180ba64811c9906a28184bbcc0a35792ba1bda3b5c2ab0cb2d0f67"},
 ]
 requests = [
     {file = "requests-2.27.1-py2.py3-none-any.whl", hash = "sha256:f22fa1e554c9ddfd16e6e41ac79759e17be9e492b3587efa038054674760e72d"},
@@ -542,8 +542,8 @@ toml = [
     {file = "toml-0.10.2.tar.gz", hash = "sha256:b3bda1d108d5dd99f4a20d24d9c348e91c4db7ab1b749200bded2f839ccbe68f"},
 ]
 typing-extensions = [
-    {file = "typing_extensions-4.0.1-py3-none-any.whl", hash = "sha256:7f001e5ac290a0c0401508864c7ec868be4e701886d5b573a9528ed3973d9d3b"},
-    {file = "typing_extensions-4.0.1.tar.gz", hash = "sha256:4ca091dea149f945ec56afb48dae714f21e8692ef22a395223bcd328961b6a0e"},
+    {file = "typing_extensions-4.1.1-py3-none-any.whl", hash = "sha256:21c85e0fe4b9a155d0799430b0ad741cdce7e359660ccbd8b530613e8df88ce2"},
+    {file = "typing_extensions-4.1.1.tar.gz", hash = "sha256:1a9462dcc3347a79b1f1c0271fbe79e844580bb598bafa1ed208b94da3cdcd42"},
 ]
 urllib3 = [
     {file = "urllib3-1.26.8-py2.py3-none-any.whl", hash = "sha256:000ca7f471a233c2251c6c7023ee85305721bfdf18621ebff4fd17a8653427ed"},
