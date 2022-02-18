@@ -31,7 +31,7 @@ jobs:
           poetry run playwright install
       - name: Run tests
         run: |
-          poetry run pytest tests/ --junit-xml results/pytest.xml
+          poetry run ./tests/test_runner.command
       - name: Test Report
         uses: dorny/test-reporter@v1
         if: success() || failure()    # run this step even if previous step failed
