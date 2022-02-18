@@ -28,12 +28,17 @@ jobs:
         run: |
           poetry install
           poetry run playwright install
+      # - name: Run tests
+      #   run: |
+      #     cd tests
+      #     chmod u+x ./test_runner.command
+      #     poetry run pytest test_google.py --junitxml=../results/result_google.xml
+      #     poetry run pytest test_yahoo.py --junitxml=../results/result_yahoo.xml
       - name: Run tests
         run: |
           cd tests
           chmod u+x ./test_runner.command
-          poetry run pytest test_google.py --junitxml=../results/result_google.xml
-          poetry run pytest test_yahoo.py --junitxml=../results/result_yahoo.xml
+          poetry run sh ./test_runner.command
         continue-on-error: true
       - name: Test Report
         uses: dorny/test-reporter@v1
