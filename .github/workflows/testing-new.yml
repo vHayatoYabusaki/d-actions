@@ -32,7 +32,8 @@ jobs:
         run: |
           cd tests
           chmod u+x ./test_runner.command
-          poetry run sh ./test_runner.command
+          poetry run pytest test_google.py --junitxml=../results/result_google.xml
+          poetry run pytest test_yahoo.py --junitxml=../results/result_yahoo.xml
         continue-on-error: true
       - name: Publish Unit Test Results
         uses: EnricoMi/publish-unit-test-result-action/composite@v1
