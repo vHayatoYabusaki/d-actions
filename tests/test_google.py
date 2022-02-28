@@ -15,3 +15,5 @@ class TestGoogle:
     def test_skip_google(self, page: Page):
         page.goto("https://www.google.com/")
         assert "google" not in page.url
+
+    ##
