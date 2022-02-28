@@ -20,7 +20,7 @@ jobs:
       - uses: actions/cache@v2
         id: poetry_cache_id
         with:
-          path: /Users/runner/Library/Caches/
+          path: /Users/runner/work/d-actions/d-actions
           key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
       - name: Run image
         uses: abatilo/actions-poetry@v2.1.3
