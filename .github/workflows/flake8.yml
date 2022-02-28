@@ -1,9 +1,6 @@
 name: Lint with Flake8
 
-on:
-  push:
-    paths:
-      - '*.py'
+on: [push]
 
 jobs:
   lint:
