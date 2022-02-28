@@ -1,9 +1,6 @@
 name: Formatting with black
 
-on:
-  push:
-    paths:
-      - '*.py'
+on: [push]
 
 jobs:
   formatting:
