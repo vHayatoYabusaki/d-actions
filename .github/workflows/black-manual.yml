@@ -2,6 +2,8 @@ name: Formatting with black
 
 on:
   workflow_dispatch:
+    branches:
+      develop
     inputs:
       logLevel:
         description: 'Log level'
