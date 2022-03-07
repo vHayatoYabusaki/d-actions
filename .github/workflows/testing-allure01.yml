@@ -41,12 +41,12 @@ jobs:
       - name: Test marketplace action
         uses: simple-elf/allure-report-action@master
         if: always()
-        id: allure-report-01
+        id: allure-report
         with:
-          allure_results: allure-results
+          allure_results: allure-results-01
           gh_pages: gh-pages
           allure_report: allure-report
-          allure_history: allure-history
+          allure_history: allure-history-01
           subfolder: 01
           keep_reports: 20
       - name: Deploy report to Github Pages
@@ -55,4 +55,4 @@ jobs:
         env:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: allure-history
+          PUBLISH_DIR: allure-history-01
