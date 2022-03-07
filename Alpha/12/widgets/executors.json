@@ -1,0 +1,10 @@
+[ {
+  "name" : "GitHub Actions",
+  "type" : "github",
+  "url" : "https://vHayatoYabusaki.github.io/d-actions/Alpha",
+  "buildOrder" : 12,
+  "buildName" : "GitHub Actions Run #1942988976",
+  "buildUrl" : "https://github.com/vHayatoYabusaki/d-actions/actions/runs/1942988976",
+  "reportName" : "Allure Report with history",
+  "reportUrl" : "https://vHayatoYabusaki.github.io/d-actions/Alpha/12/"
+} ]

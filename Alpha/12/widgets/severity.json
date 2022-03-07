@@ -1,0 +1,31 @@
+[ {
+  "uid" : "fec8fc987f9827ff",
+  "name" : "test_skip_google[chromium]",
+  "time" : {
+    "start" : 1646617001464,
+    "stop" : 1646617001464,
+    "duration" : 0
+  },
+  "status" : "skipped",
+  "severity" : "normal"
+}, {
+  "uid" : "9dd7506190a4ae50",
+  "name" : "test_google[chromium]",
+  "time" : {
+    "start" : 1646616998897,
+    "stop" : 1646616999969,
+    "duration" : 1072
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "9c9aacb857b4649b",
+  "name" : "test_fail_google[chromium]",
+  "time" : {
+    "start" : 1646617000026,
+    "stop" : 1646617001414,
+    "duration" : 1388
+  },
+  "status" : "failed",
+  "severity" : "normal"
+} ]
