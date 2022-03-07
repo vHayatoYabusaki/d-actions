@@ -24,12 +24,12 @@ jobs:
           poetry run playwright install
       - name: Run tests
         run: |
-          poetry run pytest tests/test_yahoo.py --alluredir=allure-results-B
+          poetry run pytest tests/test_yahoo.py --alluredir=allure-results
       - name: Upload Unit Test Results
         uses: actions/upload-artifact@master
         with:
-          name: allure-results-B
-          path: allure-results-B
+          name: allure-results
+          path: allure-results
           retention-days: 20
       - name: Get Allure history
         uses: actions/checkout@v2
@@ -41,13 +41,13 @@ jobs:
       - name: Test marketplace action
         uses: simple-elf/allure-report-action@master
         if: always()
-        id: allure-report-B
+        id: allure-report
         with:
-          allure_results: allure-results-B
+          allure_results: allure-results
           gh_pages: gh-pages
-          allure_report: allure-report-B
-          allure_history: allure-history-B
-          subfolder: B
+          allure_report: allure-report
+          allure_history: allure-history
+          subfolder: Beta
           keep_reports: 20
       - name: Deploy report to Github Pages
         if: always()
@@ -55,4 +55,4 @@ jobs:
         env:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: allure-history-B
+          PUBLISH_DIR: allure-history
