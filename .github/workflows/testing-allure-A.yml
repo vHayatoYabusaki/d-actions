@@ -22,11 +22,11 @@ jobs:
         run: |
           poetry install
           poetry run playwright install
-          chmod u+x /tests/runnners/test_runner_google.sh
+          chmod u+x tests/runners/test_runner_google.sh
       - name: Run tests
         run: |
           poetry shell
-          ./tests/runnners/test_runner_google.sh
+          ./tests/runners/test_runner_google.sh
       - name: Upload Unit Test Results
         uses: actions/upload-artifact@master
         with:
