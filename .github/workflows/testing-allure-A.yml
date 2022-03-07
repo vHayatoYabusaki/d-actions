@@ -23,6 +23,7 @@ jobs:
           poetry install
           poetry shell
           playwright install
+          chmod u+x /tests/test_runner_google.sh
       - name: Run tests
         run: |
           ./tests/test_runner_google.sh
