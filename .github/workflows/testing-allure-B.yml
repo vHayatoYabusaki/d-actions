@@ -47,6 +47,7 @@ jobs:
           gh_pages: gh-pages
           allure_report: allure-report-B
           allure_history: allure-history-B
+          subfolder: B
           keep_reports: 20
       - name: Deploy report to Github Pages
         if: always()
