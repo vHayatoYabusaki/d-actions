@@ -21,7 +21,8 @@ jobs:
       - name: Install dependencies
         run: |
           poetry install
-          poetry run playwright install
+          poetry shell
+          playwright install
           chmod u+x tests/test_runner.sh
       - name: Run tests
         run: |
