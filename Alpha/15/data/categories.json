@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Product defects",
+    "children" : [ {
+      "name" : "AssertionError: assert 'google' not in 'https://www.google.com/'\n  'google' is contained here:\n    https://www.google.com/\n  ?             ++++++",
+      "children" : [ {
+        "name" : "test_fail_google[chromium]",
+        "uid" : "e14665df6f87fe78",
+        "parentUid" : "a316322f2e75169f205ba5fa23dd2964",
+        "status" : "failed",
+        "time" : {
+          "start" : 1646617993781,
+          "stop" : 1646617994598,
+          "duration" : 817
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'chromium'" ]
+      } ],
+      "uid" : "a316322f2e75169f205ba5fa23dd2964"
+    } ],
+    "uid" : "8fb3a91ba5aaf9de24cc8a92edc82b5d"
+  } ],
+  "name" : "categories"
+}
