@@ -14,6 +14,7 @@ pytest-playwright = "^0.2.2"
 flake8 = "^4.0.1"
 allure-pytest = "^2.9.45"
 isort = "^5.10.1"
+pytest-xdist = "^2.5.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

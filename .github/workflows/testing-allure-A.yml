@@ -5,6 +5,14 @@ name: Testing with Allure Report 01
 
 on:
   workflow_dispatch:
+    inputs:
+      node:
+        description: 'Num of nodes'
+        required: true
+      environment:
+        description: 'Environment to run tests against'
+        type: environment
+        required: false
 
 jobs:
   ci:
@@ -26,6 +34,7 @@ jobs:
       - name: Run tests
         run: |
           ./tests/runners/test_runner_google.sh
+          poetry run pytest -n ${{ github.event.inputs.dryrun }} tests/body/test_google.py
       - name: Upload Unit Test Results
         uses: actions/upload-artifact@master
         with:
