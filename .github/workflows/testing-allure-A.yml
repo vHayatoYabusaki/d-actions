@@ -22,9 +22,10 @@ jobs:
         run: |
           poetry install
           poetry run playwright install
+          chmod u+x tests/test_runner.sh
       - name: Run tests
         run: |
-          poetry run pytest tests/ --alluredir=allure-results
+          ./tests/test_runner.sh
       - name: Upload Unit Test Results
         uses: actions/upload-artifact@master
         with:
