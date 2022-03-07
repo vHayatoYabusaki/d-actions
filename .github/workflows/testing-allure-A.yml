@@ -25,7 +25,6 @@ jobs:
           chmod u+x tests/runners/test_runner_google.sh
       - name: Run tests
         run: |
-          poetry shell
           ./tests/runners/test_runner_google.sh
       - name: Upload Unit Test Results
         uses: actions/upload-artifact@master
