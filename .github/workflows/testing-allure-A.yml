@@ -26,7 +26,7 @@ jobs:
           chmod u+x tests/test_runner.sh
       - name: Run tests
         run: |
-          ./tests/test_runner.sh
+          ./tests/test_runner_google.sh
       - name: Upload Unit Test Results
         uses: actions/upload-artifact@master
         with:
