@@ -1,7 +1,7 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
-name: Testing with Allure Report 01
+name: Testing with Allure Report 02
 
 on:
   workflow_dispatch:
@@ -24,12 +24,12 @@ jobs:
           poetry run playwright install
       - name: Run tests
         run: |
-          poetry run pytest tests/ --alluredir=allure-results-01
+          poetry run pytest tests/ --alluredir=allure-results-02
       - name: Upload Unit Test Results
         uses: actions/upload-artifact@master
         with:
-          name: allure-results-01
-          path: allure-results-01
+          name: allure-results-02
+          path: allure-results-02
           retention-days: 20
       - name: Get Allure history
         uses: actions/checkout@v2
@@ -37,17 +37,16 @@ jobs:
         continue-on-error: true
         with:
           ref: gh-pages
-          path: gh-pages
+          path: gh-pages/allure-history-02
       - name: Test marketplace action
         uses: simple-elf/allure-report-action@master
         if: always()
-        id: allure-report-01
+        id: allure-report-02
         with:
-          allure_results: allure-results
+          allure_results: allure-results-02
           gh_pages: gh-pages
-          allure_report: allure-report
-          allure_history: allure-history
-          subfolder: 01
+          allure_report: allure-report-02
+          allure_history: allure-history-02
           keep_reports: 20
       - name: Deploy report to Github Pages
         if: always()
@@ -55,4 +54,4 @@ jobs:
         env:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: allure-history
+          PUBLISH_DIR: allure-history-02
