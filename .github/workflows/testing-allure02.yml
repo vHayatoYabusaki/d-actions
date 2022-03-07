@@ -25,7 +25,7 @@ jobs:
           poetry run playwright install
       - name: Run tests
         run: |
-          poetry run pytest tests/test_google.py --alluredir=allure-results-B
+          poetry run pytest tests/test_yahoo.py --alluredir=allure-results-B
       - name: Upload Unit Test Results
         uses: actions/upload-artifact@master
         with:
