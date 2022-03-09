@@ -1,1 +1,1 @@
-poetry run pytest tests/body/test_google.py --alluredir=allure-results
+poetry run pytest tests/body/test_google.py --browser-channel msedge
