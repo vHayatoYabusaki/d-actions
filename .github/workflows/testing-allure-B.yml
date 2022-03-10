@@ -24,12 +24,12 @@ jobs:
           poetry run playwright install
       - name: Run tests
         run: |
-          poetry run pytest tests/test_yahoo.py --alluredir=allure-results-beta
+          poetry run pytest tests/body/test_yahoo.py --alluredir=allure-results
       - name: Upload Unit Test Results
         uses: actions/upload-artifact@master
         with:
-          name: allure-results-beta
-          path: allure-results-beta
+          name: allure-results
+          path: allure-results
           retention-days: 20
       - name: Get Allure history
         uses: actions/checkout@v2
@@ -37,13 +37,13 @@ jobs:
         continue-on-error: true
         with:
           ref: gh-pages
-          path: gh-pages/Beta
+          path: gh-pages
       - name: Test marketplace action
         uses: simple-elf/allure-report-action@master
         if: always()
         id: allure-report
         with:
-          allure_results: allure-results-beta
+          allure_results: allure-results
           gh_pages: gh-pages
           allure_history: allure-history
           subfolder: Beta
