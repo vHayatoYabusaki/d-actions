@@ -24,12 +24,12 @@ jobs:
           poetry run playwright install
       - name: Run tests
         run: |
-          poetry run pytest tests/test_yahoo.py --alluredir=allure-results
+          poetry run pytest tests/test_yahoo.py --alluredir=allure-results-beta
       - name: Upload Unit Test Results
         uses: actions/upload-artifact@master
         with:
-          name: allure-results
-          path: allure-results
+          name: allure-results-beta
+          path: allure-results-beta
           retention-days: 20
       - name: Get Allure history
         uses: actions/checkout@v2
@@ -37,15 +37,14 @@ jobs:
         continue-on-error: true
         with:
           ref: gh-pages
-          path: gh-pages
+          path: gh-pages/Beta
       - name: Test marketplace action
         uses: simple-elf/allure-report-action@master
         if: always()
         id: allure-report
         with:
-          allure_results: allure-results
+          allure_results: allure-results-beta
           gh_pages: gh-pages
-          allure_report: allure-report
           allure_history: allure-history
           subfolder: Beta
           keep_reports: 20
@@ -56,12 +55,3 @@ jobs:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: allure-history
-      - name: Post the link to the report
-        if: always()
-        uses: Sibz/github-status-action@v1
-        with:
-            authToken: ${{secrets.GITHUB_TOKEN}}
-            context: 'Test report'
-            state: 'success'
-            sha: ${{ github.event.pull_request.head.sha }}
-            target_url: vhayatoyabusaki.github.io/d-actions/Beta/${{ github.run_number }}
