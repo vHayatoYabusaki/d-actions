@@ -1,0 +1,26 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "children" : [ {
+    "name" : "fv-az249-61",
+    "children" : [ {
+      "name" : "2537-MainThread",
+      "children" : [ {
+        "name" : "test_yahoo[chromium]",
+        "uid" : "f4923da868da48a7",
+        "parentUid" : "dfe0422deae63b9de55b6371b6868d32",
+        "status" : "passed",
+        "time" : {
+          "start" : 1646879712287,
+          "stop" : 1646879714113,
+          "duration" : 1826
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'chromium'" ]
+      } ],
+      "uid" : "dfe0422deae63b9de55b6371b6868d32"
+    } ],
+    "uid" : "119241290cf27d23ba527dde3e3dbc93"
+  } ],
+  "name" : "timeline"
+}
