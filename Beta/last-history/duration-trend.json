@@ -1,4 +1,9 @@
 [ {
+  "buildOrder" : 2,
+  "reportUrl" : "https://vHayatoYabusaki.github.io/d-actions/Beta/2/",
+  "reportName" : "Allure Report with history",
+  "data" : { }
+}, {
   "buildOrder" : 1,
   "reportUrl" : "https://vHayatoYabusaki.github.io/d-actions/Beta/1/",
   "reportName" : "Allure Report with history",
