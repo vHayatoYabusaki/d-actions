@@ -1,0 +1,22 @@
+{
+  "a0a4145d99b1ef1b53fab87cb3b78ed4" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "ac16938742e6084b",
+      "reportUrl" : "https://vHayatoYabusaki.github.io/d-actions/Beta/6//#testresult/ac16938742e6084b",
+      "status" : "passed",
+      "time" : {
+        "start" : 1646879018113,
+        "stop" : 1646879019402,
+        "duration" : 1289
+      }
+    } ]
+  }
+}

@@ -1,0 +1,11 @@
+[ {
+  "uid" : "ac16938742e6084b",
+  "name" : "test_yahoo[chromium]",
+  "time" : {
+    "start" : 1646879018113,
+    "stop" : 1646879019402,
+    "duration" : 1289
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

@@ -1,0 +1,30 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "children" : [ {
+    "name" : "tests.body",
+    "children" : [ {
+      "name" : "test_yahoo",
+      "children" : [ {
+        "name" : "TestYahoo",
+        "children" : [ {
+          "name" : "test_yahoo[chromium]",
+          "uid" : "ac16938742e6084b",
+          "parentUid" : "80670cafe18a68ccc56d084fd06e93a7",
+          "status" : "passed",
+          "time" : {
+            "start" : 1646879018113,
+            "stop" : 1646879019402,
+            "duration" : 1289
+          },
+          "flaky" : false,
+          "newFailed" : false,
+          "parameters" : [ "'chromium'" ]
+        } ],
+        "uid" : "80670cafe18a68ccc56d084fd06e93a7"
+      } ],
+      "uid" : "38a9f693785eeedd7a32e9ced343816a"
+    } ],
+    "uid" : "017ed31e240aa522e1c0ffae398c25d7"
+  } ],
+  "name" : "suites"
+}

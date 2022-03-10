@@ -1,0 +1,18 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "children" : [ {
+    "name" : "test_yahoo[chromium]",
+    "uid" : "ac16938742e6084b",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "passed",
+    "time" : {
+      "start" : 1646879018113,
+      "stop" : 1646879019402,
+      "duration" : 1289
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ "'chromium'" ]
+  } ],
+  "name" : "behaviors"
+}
