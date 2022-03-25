@@ -37,7 +37,6 @@ jobs:
         run: |
           poetry install
           poetry run playwright install chromium webkit
-          poetry run playwright install-deps chromium webkit
           chmod u+x tests/runners/test_runnner_yahoo.sh
       - name: Run tests
         run: |
