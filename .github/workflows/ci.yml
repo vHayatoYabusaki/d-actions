@@ -64,22 +64,22 @@ jobs:
       - name: Test marketplace action for chromium
         uses: simple-elf/allure-report-action@master
         if: always()
-        id: allure-report
+        id: allure-report-chromium
         with:
           allure_results: allure-results-chromium
           gh_pages: gh-pages
-          allure_report: allure-report
+          allure_report: allure-report-chromium
           allure_history: allure-history
           subfolder: e2e/chromium
           keep_reports: 20
       - name: Test marketplace action for msedge
         uses: simple-elf/allure-report-action@master
         if: always()
-        id: allure-report
+        id: allure-report-msedge
         with:
           allure_results: allure-results-chromium
           gh_pages: gh-pages
-          allure_report: allure-report
+          allure_report: allure-report-msedge
           allure_history: allure-history
           subfolder: e2e/msedge
           keep_reports: 20
