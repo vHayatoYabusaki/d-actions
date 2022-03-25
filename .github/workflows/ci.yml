@@ -37,10 +37,10 @@ jobs:
         run: |
           poetry install
           poetry run playwright install chromium webkit
-          chmod u+x tests/runners/test_runnner_yahoo.sh
+          chmod u+x tests/runners/test_runner_yahoo.sh
       - name: Run tests
         run: |
-          tests/runners/test_runnner_yahoo.sh
+          tests/runners/test_runner_yahoo.sh
       - name: Upload Unit Test Results for chromium
         uses: actions/upload-artifact@master
         with:
