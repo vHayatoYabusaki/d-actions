@@ -36,15 +36,23 @@ jobs:
       - name: Install dependencies
         run: |
           poetry install
-          poetry run playwright install
+          poetry run playwright install chromium webkit
+          poetry run playwright install-deps chromium webkit
+          chmod u+x tests/runners/test_runnner_yahoo.sh
       - name: Run tests
         run: |
-          poetry run pytest tests/ --alluredir=allure-results
-      - name: Upload Unit Test Results
+          tests/runners/test_runnner_yahoo.sh
+      - name: Upload Unit Test Results for chromium
         uses: actions/upload-artifact@master
         with:
-          name: allure-results
-          path: allure-results
+          name: allure-results-chromium
+          path: allure-results-chromium
+          retention-days: 20
+      - name: Upload Unit Test Results for webkit
+        uses: actions/upload-artifact@master
+        with:
+          name: allure-results-webkit
+          path: allure-results-webkit
           retention-days: 20
       - name: Get Allure history
         uses: actions/checkout@v2
@@ -53,15 +61,27 @@ jobs:
         with:
           ref: gh-pages
           path: gh-pages
-      - name: Test marketplace action
+      - name: Test marketplace action for chromium
         uses: simple-elf/allure-report-action@master
         if: always()
         id: allure-report
         with:
-          allure_results: allure-results
+          allure_results: allure-results-chromium
           gh_pages: gh-pages
           allure_report: allure-report
           allure_history: allure-history
+          subfolder: e2e/chromium
+          keep_reports: 20
+      - name: Test marketplace action for msedge
+        uses: simple-elf/allure-report-action@master
+        if: always()
+        id: allure-report
+        with:
+          allure_results: allure-results-chromium
+          gh_pages: gh-pages
+          allure_report: allure-report
+          allure_history: allure-history
+          subfolder: e2e/msedge
           keep_reports: 20
       - name: Deploy report to Github Pages
         if: always()
@@ -70,12 +90,3 @@ jobs:
           PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: allure-history
-      - name: Post the link to the report
-        if: always()
-        uses: Sibz/github-status-action@v1
-        with:
-            authToken: ${{secrets.GITHUB_TOKEN}}
-            context: 'Test report'
-            state: 'success'
-            sha: ${{ github.event.pull_request.head.sha }}
-            target_url: vhayatoyabusaki.github.io/d-actios/${{ github.run_number }}
