@@ -35,7 +35,7 @@ jobs:
           poetry-version: 1.1.12
       - name: Install dependencies
         run: |
-          poetry install
+          poetry install --dev-only
           poetry run playwright install chromium webkit
           poetry run playwright install-deps webkit
           chmod u+x tests/runners/test_runner_yahoo.sh
