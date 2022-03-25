@@ -1,0 +1,22 @@
+{
+  "a0a4145d99b1ef1b53fab87cb3b78ed4" : {
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 1,
+      "unknown" : 0,
+      "total" : 1
+    },
+    "items" : [ {
+      "uid" : "4043051b8ea893e5",
+      "reportUrl" : "https://vHayatoYabusaki.github.io/d-actions/e2e/chromium/9//#testresult/4043051b8ea893e5",
+      "status" : "passed",
+      "time" : {
+        "start" : 1648186990749,
+        "stop" : 1648186992320,
+        "duration" : 1571
+      }
+    } ]
+  }
+}

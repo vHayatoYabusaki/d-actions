@@ -1,0 +1,9 @@
+[ {
+  "buildOrder" : 9,
+  "reportUrl" : "https://vHayatoYabusaki.github.io/d-actions/e2e/chromium/9/",
+  "reportName" : "Allure Report with history",
+  "data" : {
+    "run" : 1,
+    "retry" : 0
+  }
+} ]

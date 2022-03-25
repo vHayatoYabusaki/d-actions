@@ -1,0 +1,10 @@
+[ {
+  "name" : "GitHub Actions",
+  "type" : "github",
+  "url" : "https://vHayatoYabusaki.github.io/d-actions/e2e/chromium",
+  "buildOrder" : 9,
+  "buildName" : "GitHub Actions Run #2038348383",
+  "buildUrl" : "https://github.com/vHayatoYabusaki/d-actions/actions/runs/2038348383",
+  "reportName" : "Allure Report with history",
+  "reportUrl" : "https://vHayatoYabusaki.github.io/d-actions/e2e/chromium/9/"
+} ]
