@@ -76,7 +76,7 @@ jobs:
         if: always()
         id: allure-report-msedge
         with:
-          allure_results: allure-results-chromium
+          allure_results: allure-results-msedge
           gh_pages: gh-pages
           allure_report: allure-report-msedge
           allure_history: allure-history
