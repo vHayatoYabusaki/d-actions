@@ -37,6 +37,7 @@ jobs:
         run: |
           poetry install
           poetry run playwright install chromium webkit
+          poetry run playwright install-deps webkit
           chmod u+x tests/runners/test_runner_yahoo.sh
       - name: Run tests
         run: |
@@ -71,16 +72,16 @@ jobs:
           allure_history: allure-history
           subfolder: e2e/chromium
           keep_reports: 20
-      - name: Test marketplace action for msedge
+      - name: Test marketplace action for webkit
         uses: simple-elf/allure-report-action@master
         if: always()
-        id: allure-report-msedge
+        id: allure-report-webkit
         with:
-          allure_results: allure-results-msedge
+          allure_results: allure-results-webkit
           gh_pages: gh-pages
-          allure_report: allure-report-msedge
+          allure_report: allure-report-webkit
           allure_history: allure-history
-          subfolder: e2e/msedge
+          subfolder: e2e/webkit
           keep_reports: 20
       - name: Deploy report to Github Pages
         if: always()
